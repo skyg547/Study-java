@@ -1,1 +1,29 @@
 
+import java.util.*;
+
+public class Start {
+	
+
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		
+		double feet,len,wid,V;
+		
+		
+		System.out.print("Input the feet : ");
+		feet = input.nextDouble();
+		
+		System.out.print("Input the len : ");
+		len = input.nextDouble();
+		
+		System.out.print("Input the wid : ");
+		wid = input.nextDouble();
+	
+		
+		V = feet*len*wid;
+		
+		System.out.println("V iS : "+V);
+	
+	}
+}
