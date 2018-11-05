@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Start {
+	
+
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		
+		double Sum=0, avg = 0, in;
+		int N;
+		System.out.print("Input the N : ");
+		N = input.nextInt();
+		
+		for(int i=0; i < N; i++) {
+			
+			System.out.print("Give me a Number : ");
+			in = input.nextDouble();
+			Sum = Sum + in;
+		}
+		
+		avg = Sum/N;
+		
+		System.out.println(avg);
+	}
+}
