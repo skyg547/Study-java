@@ -1,0 +1,54 @@
+import java.util.*;
+
+public class Start {
+	
+
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		
+		int score = 0;
+		
+		System.out.println("Answer each of the following questions with a number from 1 to 5");
+		System.out.println("such that 1 means 'NEVER' and 5 means 'ALWAYS' \n");
+		
+		System.out.print("1. I am competitive : ");
+		score  = score + input.nextInt();
+		
+		System.out.print("2. I am annoyed by people who are late for appintments : ");
+		score  = score + input.nextInt();
+
+		System.out.print("3. I peform sevral tasks simultaneously : ");
+		score  = score + input.nextInt();
+
+		System.out.print("4. I am ambitious : ");
+		score  = score + input.nextInt();
+
+		System.out.print("5. I rush to get tasks completed : ");
+		score  = score + input.nextInt();
+
+		System.out.print("6. I worry about the future : ");
+		score  = score + input.nextInt();
+
+		System.out.print("7. I am in a race with time :");
+		score  = score + input.nextInt();
+
+		System.out.print("8. I speak very rapidly : ");
+		score  = score + input.nextInt();
+		
+		System.out.println();
+		
+		if(score >= 35) {
+			System.out.println("Score : "+ score +". Your personality Type A");
+		} else if(score >= 21) {
+			System.out.println("Score : "+ score +". You are between A and B tending towards A");
+		} else if (score >= 12) {
+			System.out.println("Score : "+ score +". You are between A and B tending towards B ");
+		} else {
+			System.out.println("Score : "+ score +". Your personality is Type B");
+		}
+		
+	}
+	
+}
+
