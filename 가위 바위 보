@@ -1,0 +1,56 @@
+import java.util.*;
+
+public class Start {
+	
+
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		
+		final int ROCK = 0;
+		final int SCISSORS = 1;
+		final int PAPER = 2;
+		
+		int player,computer;
+		
+		System.out.print("Rock : 0; Scissors:1; Paper:2 -- Choose : ");
+		
+		player = input.nextInt();
+		computer = (int)(3*Math.random());//0,1,2 임의의 숫자 한개 
+		System.out.println("The computer Choose : "+ computer);
+		System.out.println("******************************************");
+		
+		if(player == computer) {
+			
+			System.out.println("It's a tie!");
+						
+		} else {
+			
+			if (player == ROCK) {				
+				if(computer == SCISSORS) {
+					System.out.print("Player : Rock \nComputer : Scissor\nPlayer Wins");
+					
+				} else {
+					System.out.print("Player : Rock \nComputer : Paper \nPlayer Lose");
+				}				
+			}
+			
+			if (player == SCISSORS) {				
+				if(computer == ROCK) {
+					System.out.print("Player : Scissors \nComputer : Rocks\nPlayer Lose");					
+				} else {
+					System.out.print("Player : Scissors \nComputer : Paper \nPlayer Wins");
+				}
+			}
+
+			if (player == PAPER) {				
+				if(computer == ROCK) {
+					System.out.print("Player : Papers \nComputer : Rocks\nPlayer Wins");					
+				} else {
+					System.out.print("Player : Papers \nComputer : Scissor \nPlayer Lose");
+				}
+			}
+			
+		}
+	}
+}
