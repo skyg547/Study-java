@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Start {
+	
+
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		
+		double deposit, withdrawal;
+		double balance = 5423.00;
+		int transaction;
+		
+		System.out.println("Welcome! Enter the number of your transaction");
+		System.out.println("withdraw cash:		1");
+		System.out.println("make a deposit: 	2");
+		System.out.println("check your balance:	3");
+		System.out.println("Exit:			4");
+		System.out.println("---------------------");
+		System.out.print("Transaction nubmer: ");
+		transaction = input.nextInt();
+		
+		if(transaction == 1)
+		{
+			System.out.print("Enter amount: ");
+			withdrawal = input.nextDouble();
+			
+			if(withdrawal > balance) {
+				System.out.print("Invaild withdrawal amount");	
+			} else {
+				balance = balance - withdrawal;
+				System.out.print("Your new balance is $ "+ balance);
+			}
+		}		
+		else if (transaction == 2 ) {
+			System.out.print("Enter amount of deposit: ");
+			deposit = input.nextDouble();
+			balance = balance +deposit;
+			System.out.println("Your new balance is $"+ balance);			
+		} else if (transaction == 3) {
+			System.out.println("Your balance is $"+balance);
+		} else if (transaction == 4) {
+			System.out.println("Thank you.");
+		} else {
+			System.out.print("Invalid transaction");
+		}
+		
+	}
+}
